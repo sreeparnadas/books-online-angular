@@ -23,6 +23,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AuthComponent } from './auth/auth.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
     AppComponent,
     HeaderComponent,
     AuthComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

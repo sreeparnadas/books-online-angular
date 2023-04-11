@@ -23,6 +23,18 @@ export class AuthService {
   }
 
 
+  registration(registrationData: any){    
+    return this.http.post<any>(GlobalVariable.BASE_API_URL + '/auth/register', registrationData)
+    .pipe(catchError(this.serverError), tap(resData => {
+      if (resData.status === true){
+
+      }else{
+        console.log('error')
+      }
+    })); 
+  }
+
+
   private serverError(err: any) {
     // console.log('sever error:', err);  // debug
     if (err instanceof Response) {
