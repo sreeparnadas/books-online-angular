@@ -1,4 +1,4 @@
-<mat-toolbar id="header">
+<mat-toolbar id="header"  *ngIf="user==null">
     <span>BooksOnline</span>
     <span class="example-spacer"></span>
 
@@ -15,5 +15,19 @@
             <span>Login</span>
         </button>
     </mat-menu>
-      
-  </mat-toolbar>
+</mat-toolbar>
+
+
+<mat-toolbar id="header" *ngIf="user!=null">
+    <span>BooksOnline</span>
+    <span class="example-spacer"></span>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item  [routerLink]="['/']" (click)="logOut()">
+            <span>Logout</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>

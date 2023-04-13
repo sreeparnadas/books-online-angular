@@ -27,6 +27,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { CustomerComponent } from './customer/customer.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { BookDetailsComponent } from './book-details/book-details.component';
     RegistrationComponent,
     CustomerComponent,
     BookListComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

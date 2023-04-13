@@ -41,7 +41,6 @@ export class RegistrationComponent {
     }
     const md5 = new Md5();
     const passwordMd5 = md5.appendStr(password).end();
-    console.log(passwordMd5)
     let registrationData = {
       firstName: this.registrationForm.value.firstName,
       lastName: this.registrationForm.value.lastName,
