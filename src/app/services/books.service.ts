@@ -9,7 +9,7 @@ import {Subject, BehaviorSubject} from "rxjs";
 })
 export class BooksService {
 
-  books = new Array<any>();
+  books = new Array<any[]>();
   booksSubject = new Subject<any>();
 
   private selectedBookSubject = new BehaviorSubject<any>(null);
