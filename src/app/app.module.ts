@@ -24,6 +24,9 @@ import { HeaderComponent } from './header/header.component';
 import { AuthComponent } from './auth/auth.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { CustomerComponent } from './customer/customer.component';
+import { BookListComponent } from './book-list/book-list.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
 
 
 @NgModule({
@@ -32,7 +35,10 @@ import { RegistrationComponent } from './registration/registration.component';
     HeaderComponent,
     AuthComponent,
     AdminPanelComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    CustomerComponent,
+    BookListComponent,
+    BookDetailsComponent
   ],
   imports: [
     BrowserModule,

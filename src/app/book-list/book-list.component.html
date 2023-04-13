@@ -1,0 +1,31 @@
+
+<!-- <pre>{{books | json}}</pre> -->
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Publisher</th>
+        <th scope="col">Category</th>
+        <th scope="col">Price</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books, let i = index">
+        <td>{{i+1}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author_name}}</td>
+        <td>{{book.publisher_name}}</td>
+        <td>{{book.category_name}}</td>
+        <td>{{book.price}}</td>
+        <td>
+          <button mat-icon-button aria-label="your label" (click)="onBookSelected(book)">
+            <mat-icon>visibility</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+</table>

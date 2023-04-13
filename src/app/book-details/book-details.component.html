@@ -1,0 +1,47 @@
+<div class="container" *ngIf="selectedBook!==null">
+    <h2 *ngIf="selectedBook!==null"><u>Details:</u></h2>
+    <div class="row">
+      <div class="col">
+        <h1>{{selectedBook.title}}</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <span><b>Author:</b>&nbsp;</span>
+        <span>{{selectedBook.author_name}}</span>
+      </div>
+      <div class="col">
+        <span><b>Category:</b>&nbsp;</span>
+        <span>{{selectedBook.category_name}}</span>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-1">
+          <span><b>Price:</b>&nbsp;</span>
+        </div>
+        <div class="col-3">{{selectedBook.price}}</div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+          <span><b>Publisher:</b>&nbsp;</span>
+        </div>
+        <div class="col">{{selectedBook.publisher_name}}</div>
+    </div>
+
+    <div class="row mt-5" *ngIf="selectedBook.stock < 5">
+        <div class="col">
+          <span class="text-danger">Only {{selectedBook.stock}} left. Hurry up!</span>
+        </div>
+    </div>
+
+
+    <div class="row mt-5">
+        <div  class="col-md-6 col-md-offset-3">
+            <button mat-raised-button color="primary">Add to cart</button>
+        </div>
+    </div>
+</div>
+

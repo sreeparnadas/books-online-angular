@@ -31,7 +31,12 @@ export class AuthComponent {
     let response = this.authService.login(loginData).subscribe(
     {
       next: (v) => {
-        this.router.navigate(['/adminPanel']);
+        if(v.data.user_type_id == 2){
+          this.router.navigate(['/customer'])
+        }
+        else if(v.data.userTypeId == 1){
+          this.router.navigate(['/adminPanel'])
+        }
         Swal.fire({
           position: 'top-end',
           icon: 'success',

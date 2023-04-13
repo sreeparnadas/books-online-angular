@@ -41,6 +41,7 @@ export class RegistrationComponent {
     }
     const md5 = new Md5();
     const passwordMd5 = md5.appendStr(password).end();
+    console.log(passwordMd5)
     let registrationData = {
       firstName: this.registrationForm.value.firstName,
       lastName: this.registrationForm.value.lastName,
@@ -51,7 +52,10 @@ export class RegistrationComponent {
     let response = this.authService.registration(registrationData).subscribe(
     {
       next: (v) => {
-        this.router.navigate(['/adminPanel']);
+        if(this.registrationForm.value.userTypeId == 2){
+          this.router.navigate(['/customer']);
+        } // if userTypeId == 2, redirect to customer page
+
         Swal.fire({
           position: 'top-end',
           icon: 'success',
